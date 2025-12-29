@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 
-// ✅ Read contract address from environment variables
+// ✅ Contract address from env variables
 const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 
 const CONTRACT_ABI = [
@@ -16,9 +16,20 @@ let contract;
 
 export async function connectWallet() {
   if (!window.ethereum) throw new Error("MetaMask not installed");
+
   provider = new ethers.BrowserProvider(window.ethereum);
+
+  // Request accounts
   await provider.send("eth_requestAccounts", []);
   signer = await provider.getSigner();
+
+  // Make sure user is on Base Mainnet
+  const network = await provider.getNetwork();
+  if (network.name !== "base") {
+    alert("Please switch your wallet to Base mainnet");
+    throw new Error("Wrong network");
+  }
+
   contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
   return signer.getAddress();
 }
