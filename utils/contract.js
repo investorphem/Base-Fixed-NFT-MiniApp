@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
 
 // ✅ Contract address from env variables
-const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDESS;
+const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 
 const CONTRACT_ABI = [
   "function mint() external payable",
