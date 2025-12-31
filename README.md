@@ -7,7 +7,7 @@ Features
 
 - Fixed metadata NFT deployed on Base mainnet
 - WalletConnect + MetaMask support for seamless wallet integration
-- Displays mint price, total mnted, and max supply dynamically
+- Displays mint price, total minted, and max supply dynamically
 - Mobile-friendly UI using Next.js + Tailwind CSS
 - Environment variable support for contract address and network
 - Easy on-chain tracking of user mint activity
