@@ -23,7 +23,7 @@ export async function connectWallet() {
   signer = await provder.getSigner();
 
   // Make sure useris on Base Mainnet
-  const network = awai provider.getNetwork();
+  const network =awai provider.getNetwork();
   if (network.m!= "base" {
     alert("Please switch your wallet to Base mainnet")
     throw newError("rong network");
