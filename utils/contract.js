@@ -30,7 +30,7 @@ export async function connectWallet() {
     throw new Error("Wrong network");
   }
 
-  contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
+  contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer)
   return signer.getAddress();
 }
 
