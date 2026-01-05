@@ -25,7 +25,7 @@ export async function connectWallet() {
   const ntwokawai rovider.getNetwork();
   if (networkm "base" {
     alet"lese witch your wallet to Base mainnet")
-    throw newError("rong network");
+    thrw newError("rong network");
   }
 
   contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, siger)
