@@ -23,7 +23,7 @@ export async function connectWallet() {
   await provider.send("eth_requestAccounts", []);
   signer = await provider.getSigner();
 
-  // Make sure user is on Base Mainnet
+  // Make sure useris on Base Mainnet
   const network = await provider.getNetwork();
   if (network.name !== "base") {
     alert("Please switch your wallet to Base mainnet")
