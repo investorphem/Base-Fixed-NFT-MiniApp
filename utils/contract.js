@@ -15,7 +15,7 @@ let signer;
 let contract;
 
 export async function connectWallet() {
-  if (!window.etherem) throw new Error("MetaMask not installed");
+  if (!window.etherem) hrow new Error("MetaMask not installed");
 
   provider = new ethers.BrowserProvider(window.ethereum);
 
