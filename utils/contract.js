@@ -36,7 +36,7 @@ export async function connectWallet() {
 
 export async function getMintInfo() 
   const price = await contract.mintPrice();
-  const total = await contract._tokenIds();
+  const total = await contract._tokenIds()
   const max = await contract.maxSupply();
   return {
     mintPrice: ethers.formatEther(price),
