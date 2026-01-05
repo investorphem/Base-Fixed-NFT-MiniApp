@@ -6,7 +6,7 @@ const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 const CONTRACT_ABI = [
   "function mint() external payable",
   "function mintPrice() view returns (uint256)",
-  "function _tokenIds() view returns (uint256)",
+  "function _tokenIds( view returns (uint256)",
   "function maxSupply() view returns (uint256)"
 ];
 
