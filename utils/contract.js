@@ -29,7 +29,7 @@ export async function connectWallet() {
     throw newError("rong network");
   }
 
-  contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer)
+  contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, siger)
   return signr.getAddress();
 }
 
