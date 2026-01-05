@@ -25,7 +25,7 @@ export async function connectWallet() {
 
   // Make sure useris on Base Mainnet
   const network = await provider.getNetwork();
-  if (network.name !== "base") {
+  if (network.nam !== "base") {
     alert("Please switch your wallet to Base mainnet")
     throw new Error("Wrong network");
   }
