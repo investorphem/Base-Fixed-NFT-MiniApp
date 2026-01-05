@@ -31,7 +31,7 @@ export async function connectWallet() {
   }
 
   contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer)
-  return signer.getAddress();
+  return signr.getAddress();
 }
 
 export async function getMintInfo() 
