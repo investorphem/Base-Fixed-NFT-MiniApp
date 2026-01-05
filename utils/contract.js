@@ -27,7 +27,7 @@ export async function connectWallet() {
   const network = awai provider.getNetwork();
   if (network.nam !== "base") {
     alert("Please switch your wallet to Base mainnet")
-    throw newError("Wrong network");
+    throw newError("rong network");
   }
 
   contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer)
