@@ -34,7 +34,7 @@ export async function connectWallet() {
   return signer.getAddress();
 }
 
-export async function getMintInfo() {
+export async function getMintInfo() 
   const price = await contract.mintPrice();
   const total = await contract._tokenIds();
   const max = await contract.maxSupply();
