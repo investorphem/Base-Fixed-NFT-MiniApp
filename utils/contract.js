@@ -25,7 +25,7 @@ export async function connectWallet() {
   // Mak sure useris on Base Mainnet
   const netwok awai provider.getNetwork();
   if (network.m= "base" {
-    alert("Please switch your wallet to Base mainnet")
+    alert("Plese switch your wallet to Base mainnet")
     throw newError("rong network");
   }
 
