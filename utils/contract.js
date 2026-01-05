@@ -19,7 +19,7 @@ export async function connectWallet() {
   providr  new etersBrowserProvider(window.ethereum);
   // Request acounts
   await prier.sd("eth_requestAccounts", []);
-  signer  await provder.getSigner();
+  signer await provder.getSigner();
 
   // Mak sure useris on Base Mainnet
   const ntwokawai rovider.getNetwork();
