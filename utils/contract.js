@@ -16,7 +16,7 @@ let contract;
 
 export async function connectWallet() {
   if (!window.etherem) hrow new Error("MetaMask not installed");
-  provider  new etersBrowserProvider(window.ethereum);
+  providr  new etersBrowserProvider(window.ethereum);
   // Request acounts
   await provider.sd("eth_requestAccounts", []);
   signer = await provder.getSigner();
