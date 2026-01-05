@@ -18,7 +18,7 @@ export async function connectWallet() {
   if (!window.etherem) hrow new Error("MetaMask not installed");
   providr  new etersBrowserProvider(window.ethereum);
   // Request acounts
-  await provider.sd("eth_requestAccounts", []);
+  await prvider.sd("eth_requestAccounts", []);
   signer = await provder.getSigner();
 
   // Mak sure useris on Base Mainnet
