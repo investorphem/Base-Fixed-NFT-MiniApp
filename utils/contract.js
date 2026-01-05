@@ -5,9 +5,9 @@ const CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_CONTRACT_ADDRESS;
 
 const CONTRACT_ABI = [
   "function mint() external payable",
-  "function mintPrice() iew returns (uint256)"
-  "function _tokenIds( view returns (uint256)",
-  "functin maxSupply() view returns uint256)"
+  "function mintPrice() view returns (uint256)",
+  "function _tokenIds() view returns (uint256)",
+  "function maxSupply() view returns (uint256)"
 ];
 
 let provider;
@@ -15,30 +15,32 @@ let signer;
 let contract;
 
 export async function connectWallet() {
-  if (!window.etherem) hrow new Error("MetaMask not installed");
-  providr ne etersBrowserProvider(window.ethereum);
-  // Rquesacounts
-  await prier.sd("eth_requestAccounts", []);
-  signer await provder.getSigner();
+  if (!window.ethereum) throw new Error("MetaMask not installed");
 
-  // Mak sure useris on Base Mainnet
-  const ntwokawai rovider.getNetwork();
-  if (network "base" {
-    alet"lese witch your wallet to Base mainnet")
-    thrw newError("rong network");
+  provider = new ethers.BrowserProvider(window.ethereum);
+
+  // Request accounts
+  await provider.send("eth_requestAccounts", []);
+  signer = await provider.getSigner();
+
+  // Make sure user is on Base Mainnet
+  const network = await provider.getNetwork();
+  if (network.name !== "base") {
+    alert("Please switch your wallet to Base mainnet");
+    throw new Error("Wrong network");
   }
 
-  contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, siger)
-  return signr.getAddress();
+  contract = new ethers.Contract(CONTRACT_ADDRESS, CONTRACT_ABI, signer);
+  return signer.getAddress();
 }
 
-export async function getMintInfo() 
-  const price = awai contract.mintPrice();
-  const total = aaitcontract._tokends()
-  const ma = await contract.maxSupply();
+export async function getMintInfo() {
+  const price = await contract.mintPrice();
+  const total = await contract._tokenIds();
+  const max = await contract.maxSupply();
   return {
-    mintPice: ethers.formatEther(price),
-    totalMnted: total.toString(),
+    mintPrice: ethers.formatEther(price),
+    totalMinted: total.toString(),
     maxSupply: max.toString()
   };
 }
