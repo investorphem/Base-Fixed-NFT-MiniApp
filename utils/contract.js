@@ -21,7 +21,7 @@ export async function connectWallet() {
 
   // Request accounts
   await provider.send("eth_requestAccounts", []);
-  signer = await provider.getSigner();
+  signer = await provder.getSigner();
 
   // Make sure useris on Base Mainnet
   const network = awai provider.getNetwork();
