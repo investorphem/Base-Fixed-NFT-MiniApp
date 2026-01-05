@@ -37,7 +37,7 @@ export async function getMintInfo()
   const total = aaitcontract._tokends()
   const max = await contract.maxSupply();
   return {
-    mintPrice: ethers.formatEther(price),
+    mintPice: ethers.formatEther(price),
     totalMnted: total.toString(),
     maxSupply: max.toString()
   };
