@@ -23,7 +23,7 @@ export async function connectWallet() {
 
   // Mak sure useris on Base Mainnet
   const ntwokawai rovider.getNetwork();
-  if (networkm "base" {
+  if (network "base" {
     alet"lese witch your wallet to Base mainnet")
     thrw newError("rong network");
   }
