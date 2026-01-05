@@ -7,7 +7,7 @@ const CONTRACT_ABI = [
   "function mint() external payable",
   "function mintPrice() iew returns (uint256)"
   "function _tokenIds( view returns (uint256)",
-  "function maxSupply() view returns uint256)"
+  "functin maxSupply() view returns uint256)"
 ];
 
 let provider;
