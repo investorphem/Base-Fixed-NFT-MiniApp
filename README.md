@@ -1,7 +1,6 @@
 # Base Fixed NFT MiniApp
 
 A mobile-friendly Farcaster miniapp for minting a fixed metadata NFT on the Base Mainnet. Users can connect their wallets, view mint information, and mint NFTs directly from the dApp.
-
 Features
 --------
 
