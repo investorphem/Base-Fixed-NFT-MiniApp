@@ -2,6 +2,7 @@
   "name": "farcaster-nft-miniapp",
   "version": "1.0.0",
   "private": true,
+  "author": "Adekunle Bamz",
   "dependencies": {
     "ethers": "^6.0.0",
     "next": "13.5.0",
