@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  nft-miniapp-dev:
+    build: .
+    container_name: nft-miniapp-dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
+
+  # Optional: Add a service for running tests in isolation
+  nft-miniapp-test:
+    build: .
+    container_name: nft-miniapp-test
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: npm test
+    profiles:
+      - test
