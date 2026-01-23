@@ -7,10 +7,13 @@ Features
 
 - Fixed metadata NFT deployed on Base mainnet
 - WalletConnect + MetaMask support for seamless wallet integration
+- **Bulk Minting**: Mint up to 10 NFTs in one transaction with gas savings
 - Displays mint price, total minted, and max supply dynamically
-- Mobile-friendly UI using Next.js + Tailwind CSS
+- Mobile-friendly UI using Next.js + Tailwind CSS with modern gradients
 - Environment variable support for contract address and network
+- Real-time gas estimation for bulk minting operations
 - Easy on-chain tracking of user mint activity
+- Toggle between single and bulk minting modes
 
 Table of Contents
 -----------------
